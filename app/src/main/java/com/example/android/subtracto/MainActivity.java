@@ -1,5 +1,6 @@
 package com.example.android.subtracto;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     float calculatesol (int opindex){
+        Context context=MainActivity.this;
         float n1=Float.parseFloat(N1.getText().toString());
         float n2=Float.parseFloat(N2.getText().toString());
+        if(N1.getText().toString()=="")
+            Toast.makeText(context,"Enter number 1",Toast.LENGTH_LONG).show();
+        if(N2.getText().toString()=="")
+            Toast.makeText(context,"Enter number 2",Toast.LENGTH_LONG).show();
         float sol=0;
         switch(opindex){
             case 1: sol=n1+n2; break;
