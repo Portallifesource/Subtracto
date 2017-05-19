@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Context context=MainActivity.this;
         float n1=Float.parseFloat(N1.getText().toString());
         float n2=Float.parseFloat(N2.getText().toString());
-        if(N1.getText().toString()=="")
+        if(N1.getText().toString().equals(""))
             Toast.makeText(context,"Enter number 1",Toast.LENGTH_LONG).show();
-        if(N2.getText().toString()=="")
+        if(N2.getText().toString().equals(""))
             Toast.makeText(context,"Enter number 2",Toast.LENGTH_LONG).show();
         float sol=0;
         switch(opindex){
